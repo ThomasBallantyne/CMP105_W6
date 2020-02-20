@@ -33,9 +33,9 @@ void Player::update(float dt)
 	velocity += gravity * dt;
 	setPosition(getPosition() + coord);
 
-	if (getPosition().y >= 500)
+	if (getPosition().y >= 625)
 	{
-		setPosition(getPosition().x, 500);
+		setPosition(getPosition().x, 625);
 		setVelocity(0, 0);
 		isOnGround = true;
 	}
