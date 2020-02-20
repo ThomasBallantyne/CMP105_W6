@@ -12,6 +12,11 @@ Glider::~Glider()
 
 }
 
+void Glider::handleInput(float dt)
+{
+	target = sf::Vector2f(input->getMouseX(), input->getMouseY());
+}
+
 void Glider::update(float dt)
 {
 	direction = target - getPosition();

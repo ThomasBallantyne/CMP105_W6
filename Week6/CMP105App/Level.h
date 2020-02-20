@@ -6,6 +6,7 @@
 #include <iostream>
 #include "Player.h"
 #include "Glider.h"
+#include "Launcher.h"
 
 
 class Level{
@@ -29,5 +30,6 @@ private:
 	// More level variables
 	Player player1;
 	Glider glider1;
+	Launcher launcher1;
 	sf::Texture texture1;
 };

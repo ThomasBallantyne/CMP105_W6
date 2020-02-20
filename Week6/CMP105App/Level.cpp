@@ -16,6 +16,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	glider1.setTexture(&texture1);
 	glider1.setSize(sf::Vector2f(50, 50));
 	glider1.setPosition(sf::Vector2f(0, 0));
+	glider1.setInput(input);
+
+	launcher1.setTexture(&texture1);
+	launcher1.setSize(sf::Vector2f(50, 50));
+	launcher1.setPosition(sf::Vector2f(0, 0));
+	launcher1.setInput(input);
 }
 
 Level::~Level()
@@ -27,6 +33,8 @@ Level::~Level()
 void Level::handleInput(float dt)
 {
 	player1.handleInput(dt);
+	glider1.handleInput(dt);
+	launcher1.handleInput(dt);
 }
 
 // Update game objects
@@ -34,6 +42,7 @@ void Level::update(float dt)
 {
 	player1.update(dt);
 	glider1.update(dt);
+	launcher1.update(dt);
 }
 
 // Render level
@@ -42,6 +51,7 @@ void Level::render()
 	beginDraw();
 	window->draw(player1);
 	window->draw(glider1);
+	window->draw(launcher1);
 	endDraw();
 }
 

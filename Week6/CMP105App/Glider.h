@@ -7,6 +7,7 @@ public:
 	Glider();
 	~Glider();
 
+	void handleInput(float dt) override;
 	void update(float dt) override;
 
 protected:
