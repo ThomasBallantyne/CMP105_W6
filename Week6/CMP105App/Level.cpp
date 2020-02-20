@@ -6,7 +6,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
+	texture1.loadFromFile("gfx/Goomba.png");
 
+	player1.setTexture(&texture1);
+	player1.setSize(sf::Vector2f(50, 50));
+	player1.setPosition(sf::Vector2f(200, 100));
+	player1.setInput(input);
 }
 
 Level::~Level()
@@ -17,20 +22,20 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	player1.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-
+	player1.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-
+	window->draw(player1);
 	endDraw();
 }
 
