@@ -3,7 +3,7 @@
 Glider::Glider()
 {
 	target = sf::Vector2f(1150, 625);
-	speed = 200;
+	acceleration = 2;
 	scale = 20;
 }
 
@@ -16,7 +16,7 @@ void Glider::update(float dt)
 {
 	direction = target - getPosition();
 	direction = Vector::normalise(direction);
-	velocity = (direction * speed);
+	velocity += (direction * acceleration);
 	setPosition(getPosition() + (velocity * dt));
 
 	if (Vector::magnitude(target - getPosition()) < 10.f)

@@ -11,7 +11,7 @@ public:
 
 protected:
 
-	float speed;
+	float acceleration;
 	float scale;
 	sf::Vector2f velocity;
 	sf::Vector2f direction;
