@@ -20,7 +20,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 
 	launcher1.setTexture(&texture1);
 	launcher1.setSize(sf::Vector2f(50, 50));
-	launcher1.setPosition(sf::Vector2f(0, 0));
+	launcher1.setPosition(sf::Vector2f(100, 625));
 	launcher1.setInput(input);
 }
 
